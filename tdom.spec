@@ -1,13 +1,11 @@
 Summary:	A XML/DOM/XPath/XSLT Implementation for Tcl
 Name:		tdom
-Version:	0.8.3
+Version:	0.9.3
 Release:	1
 License:	MPLv1.1
 Group:		System/Libraries
-Url:		http://tdom.github.com/
-Source0:	https://github.com/downloads/tDOM/tdom/tDOM-%{version}.tgz
-Patch0:		tdom.patch
-Patch1:		tdom-expat.patch
+Url:		https://core.tcl.tk/tdom/timeline
+Source0:	https://core.tcl.tk/tdom/tarball#/tdom-%{version}.tar.gz
 Patch2:		tdom-tnc.patch
 BuildRequires:	tcl-tcllib
 BuildRequires:	tcl-devel
@@ -46,10 +44,7 @@ This package contains files for developing software based on tDOM.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n tDOM-%{version}
-%patch0
-%patch1
-%patch2
+%autosetup -p0 -c -n tDOM-%{version}
 
 %build
 autoreconf --force
