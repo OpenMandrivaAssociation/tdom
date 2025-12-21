@@ -7,6 +7,7 @@ Group:		System/Libraries
 Url:		https://core.tcl.tk/tdom/timeline
 Source0:	https://core.tcl.tk/tdom/tarball#/tdom-%{version}.tar.gz
 Patch2:		tdom-tnc.patch
+BuildRequires:	make
 BuildRequires:	tcl-tcllib
 BuildRequires:	tcl-devel
 BuildRequires:	pkgconfig(expat)
